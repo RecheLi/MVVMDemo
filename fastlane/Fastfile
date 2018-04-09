@@ -17,7 +17,7 @@ PROJECT_FILE_PATH = './RFTestDemo.xcodeproj'
 
 platform :ios do
   before_all do |lane, options|
-  # git_pull
+  git_pull
   cocoapods(
     clean: true,
     podfile: "./Podfile"

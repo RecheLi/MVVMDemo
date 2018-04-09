@@ -26,6 +26,7 @@ NSString *const kRFExceptionErrorInfo          = @"errorInfo";
 NSString *const kRFExceptionErrorCode          = @"errorCode";
 NSString *const kRFExceptionSignalCode         = @"signalCode";
 NSString *const kRFExceptionUserInfoBacktrace  = @"kRFExceptionUserInfoBacktrace";
+NSString *const kRFExceptionFatalSignal        = @"kRFExceptionFatalSignal";
 
 static id<RFExceptionCaptureProtocol>_delegate = nil;
 static NSString *const RFUserInfo = @"kRedFingerUserInfo";
@@ -122,7 +123,7 @@ void _rf_signalHandler(int signalCode) {
     
     NSDictionary *userInfo = @{kRFExceptionSignalCode: @(signalCode), kRFExceptionUserInfoBacktrace: backtrace};
     NSString *reason = [NSString stringWithFormat:@"App terminated by SIG%@", [NSString stringWithUTF8String:sys_signame[signalCode]].uppercaseString];
-    NSException *e = [NSException exceptionWithName:@"Fatal Signal" reason:reason userInfo:userInfo];
+    NSException *e = [NSException exceptionWithName:kRFExceptionFatalSignal reason:reason userInfo:userInfo];
     
     _rf_uncaughtExceptionHandler(e);
 }

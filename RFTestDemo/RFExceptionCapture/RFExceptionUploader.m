@@ -8,7 +8,7 @@
 
 #import "RFExceptionUploader.h"
 
-static NSString *const RFExceptionUploaderUrl = @"http://someErrorUpdateApi";
+static NSString *const RFExceptionUploaderUrl = @"http://10.100.0.253:8801/fingergather/error/errorInfo.html";
 
 @implementation RFExceptionUploader
 
@@ -21,7 +21,7 @@ static NSString *const RFExceptionUploaderUrl = @"http://someErrorUpdateApi";
     if (!exceptionData||exceptionData.count==0) return;
     // 测试
 #if DEBUG
-//    [self _sendRequest:exceptionData uploadSuccess:succeed uploadFail:failed];
+    [self _sendRequest:exceptionData uploadSuccess:succeed uploadFail:failed];
 #else
     [self _sendRequest:exceptionData uploadSuccess:succeed uploadFail:failed];
 #endif
@@ -33,7 +33,10 @@ static NSString *const RFExceptionUploaderUrl = @"http://someErrorUpdateApi";
           uploadFail:(RFExceptionUploadFailed)failed {
     __block NSInteger successCount = 0;
     [exceptionData enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [[AFHTTPSessionManager manager] POST:RFExceptionUploaderUrl parameters:obj progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"com.redfinger.RFTestDemo"];
+//        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:configuration];
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        [manager POST:RFExceptionUploaderUrl parameters:obj progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if ([responseObject[@"resultCode"]integerValue] != 0) {
                 NSLog(@"report fail");
                 if (failed) {

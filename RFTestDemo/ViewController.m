@@ -27,7 +27,7 @@
     [super viewDidLoad];
     [self _setup];
     [self _getData];
-    [self _cashTest];
+//    [self _cashTest];
 }
 
 #pragma mark - Private
