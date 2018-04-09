@@ -1,0 +1,6 @@
+app_identifier("com.redfinger.RFTestDemo") # The bundle identifier of your app
+apple_id("apple-1@gc.com.cn") # Your Apple email address
+team_id("U3QT8LF4JE")
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

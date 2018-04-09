@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+	<title>
+		下载App
+	</title>
+	<script type="text/javascript">
+		function install(name) {
+            window.webkit.messageHandlers.RFAction.postMessage('install'+name);
+        }
+        function clickButton() {
+            window.webkit.messageHandlers.clickBtn.postMessage('clickbutton'+name);
+
+        }
+	</script>>
+</head>
+
+<body>
+	<div>
+		<span onclick="install()">点击安装</span>
+        <button type="button" onclick="clickButton()">点击按钮啊 </>
+	</div>
+</body>
+</html>

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "RFExceptionCapture.h"
+#import "RFCrashCollector.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [RFExceptionCapture registerCrashCapture];
+    [RFCrashCollector installCrashCollector];
+    
+
     return YES;
 }
 
