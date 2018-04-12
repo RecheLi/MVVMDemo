@@ -50,20 +50,21 @@
 - (void)_cashTest {
     //常见异常1---不存在方法引用
     
-//        [self performSelector:@selector(thisMthodDoesNotExist) withObject:nil];
+    //        [self performSelector:@selector(thisMthodDoesNotExist) withObject:nil];
     
     //常见异常2---键值对引用nil
     
-        [[NSMutableDictionary dictionary] setObject:nil forKey:@"nil"];
+//    [[NSMutableDictionary dictionary] setObject:nil forKey:@"nil"];
     
     //常见异常3---数组越界
     
-//    [[NSArray array] objectAtIndex:1];
+    //    [[NSArray array] objectAtIndex:1];
     
     //常见异常4---memory warning 级别3以上
     
     //    [self performSelector:@selector(killMemory) withObject:nil];
 }
+
 
 #pragma mark - Getter
 - (UIView *)glView {
@@ -75,5 +76,6 @@
     }
     return _glView;
 }
+
 
 @end

@@ -11,12 +11,12 @@
 #import "TestViewController.h"
 #import "HomeViewModel.h"
 #import "HomeCell.h"
+
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) HomeViewModel *viewModel;
-
 
 @end
 
@@ -27,18 +27,42 @@
     [super viewDidLoad];
     [self _setup];
     [self _getData];
-//    [self _cashTest];
+    [self _listenerTest];
 }
 
 #pragma mark - Private
 - (void)_setup {
-    self.navigationItem.title = self.viewModel.title;
+    self.navigationItem.title = self.viewModel.title.value;
     [self.view addSubview:self.tableView];
 }
 
 - (void)_getData {
+    @weakify(self);
     [self.viewModel getDataSuccess:^(NSArray *data) {
+        @strongify(self);
         [self.tableView reloadData];
+    } failed:^(NSError *error) {
+        NSLog(@"request failed");
+    }];
+}
+
+- (void)_listenerTest {
+    @weakify(self)
+    [self.viewModel bindListener:^(id object) {
+        @strongify(self);
+        NSLog(@"data has changed");
+        [self.tableView reloadData];
+    }];
+
+    [self.viewModel.title bindListener:^(id object) {
+        @strongify(self);
+        self.navigationItem.title = object;
+    }];
+}
+
+- (void)_appendDataTest {
+    [self.viewModel getDataSuccess:^(NSArray *data) {
+        
     } failed:^(NSError *error) {
         NSLog(@"request failed");
     }];
@@ -47,7 +71,7 @@
 - (void)_cashTest {
     //常见异常1---不存在方法引用
     
-        [self performSelector:@selector(thisMthodDoesNotExist) withObject:nil];
+//        [self performSelector:@selector(thisMthodDoesNotExist) withObject:nil];
     
     //常见异常2---键值对引用nil
     
@@ -94,10 +118,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case 0:
-            [self pushTest];
+//            [self pushTest];
+            [self _appendDataTest];
             break;
         default:
-            [self pushNext];
+//            [self pushNext];
+            self.viewModel.title.value = [NSString stringWithFormat:@"the %@ row",@(indexPath.row)];
             break;
     }
 }

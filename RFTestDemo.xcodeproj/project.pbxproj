@@ -8,27 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		430BBB97206B629B00D7999F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 430BBB96206B629B00D7999F /* AppDelegate.m */; };
-		430BBB9A206B629B00D7999F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430BBB99206B629B00D7999F /* ViewController.m */; };
 		430BBB9D206B629B00D7999F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430BBB9B206B629B00D7999F /* Main.storyboard */; };
 		430BBB9F206B629B00D7999F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430BBB9E206B629B00D7999F /* Assets.xcassets */; };
 		430BBBA2206B629B00D7999F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430BBBA0206B629B00D7999F /* LaunchScreen.storyboard */; };
 		430BBBA5206B629C00D7999F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 430BBBA4206B629C00D7999F /* main.m */; };
 		430BBBB2206B63EF00D7999F /* RFTestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 430BBBB1206B63EF00D7999F /* RFTestDemoUITests.m */; };
 		430BBBBB206B642900D7999F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BBBBA206B642900D7999F /* SnapshotHelper.swift */; };
-		430BBBBF206B9EF100D7999F /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430BBBBE206B9EF100D7999F /* NextViewController.m */; };
-		430C524B206C755500A0CFD9 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 430C524A206C755500A0CFD9 /* test.html */; };
-		430C526B206D28E200A0CFD9 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 430C5269206D28E200A0CFD9 /* HomeCell.m */; };
-		430C526C206D28E200A0CFD9 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430C526A206D28E200A0CFD9 /* HomeCell.xib */; };
-		430C526F206D295700A0CFD9 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 430C526E206D295700A0CFD9 /* HomeModel.m */; };
-		434969AB2079B607002381DF /* RFExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 434969AA2079B607002381DF /* RFExceptionHelper.m */; };
-		434969AE2079E683002381DF /* RFCrashCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 434969AD2079E683002381DF /* RFCrashCollector.m */; };
-		435577302071FF7700D0A707 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355772F2071FF7700D0A707 /* HomeViewModel.m */; };
-		435577342072007200D0A707 /* RFHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 435577332072007200D0A707 /* RFHttpClient.m */; };
-		43700274206FE26000F5D190 /* HomeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43700273206FE26000F5D190 /* HomeCellViewModel.m */; };
-		43DA4968207472E700778446 /* RFExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DA4967207472E700778446 /* RFExceptionCapture.m */; };
-		43DA496E2074738000778446 /* RFExceptionUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DA496D2074738000778446 /* RFExceptionUploader.m */; };
-		43FF27E520727D92004950B3 /* RFURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FF27E420727D92004950B3 /* RFURLProtocol.m */; };
-		43FF27EC20731F9E004950B3 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FF27EB20731F9E004950B3 /* TestViewController.m */; };
+		434D0118207EF4D600666193 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D00F6207EF4D500666193 /* ViewController.m */; };
+		434D0119207EF4D600666193 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D00F9207EF4D500666193 /* TestViewController.m */; };
+		434D011A207EF4D600666193 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D00FA207EF4D500666193 /* NextViewController.m */; };
+		434D011B207EF4D600666193 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0101207EF4D500666193 /* HomeViewModel.m */; };
+		434D011C207EF4D600666193 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0103207EF4D500666193 /* Box.m */; };
+		434D011D207EF4D600666193 /* HomeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0106207EF4D500666193 /* HomeCellViewModel.m */; };
+		434D011E207EF4D600666193 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 434D0108207EF4D500666193 /* test.html */; };
+		434D011F207EF4D600666193 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D010C207EF4D600666193 /* HomeCell.m */; };
+		434D0120207EF4D600666193 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434D010D207EF4D600666193 /* HomeCell.xib */; };
+		434D013B207EF6E600666193 /* RFHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0123207EF6E600666193 /* RFHttpClient.m */; };
+		434D013C207EF6E600666193 /* RFHttpConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0124207EF6E600666193 /* RFHttpConfig.m */; };
+		434D013E207EF6E600666193 /* RFExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D012C207EF6E600666193 /* RFExceptionHelper.m */; };
+		434D013F207EF6E600666193 /* RFExceptionUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D012E207EF6E600666193 /* RFExceptionUploader.m */; };
+		434D0140207EF6E600666193 /* RFCrashCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D012F207EF6E600666193 /* RFCrashCollector.m */; };
+		434D0141207EF6E600666193 /* RFExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0133207EF6E600666193 /* RFExceptionCapture.m */; };
+		434D014A207EFDFB00666193 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0149207EFDFB00666193 /* HomeModel.m */; };
+		43ED8D21207F3D6900F32E80 /* RFCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ED8D20207F3D6900F32E80 /* RFCache.m */; };
 		CFE5C948E5C2CC4C22F71D64 /* Pods_RFTestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638B729F1779850CE9BE47D3 /* Pods_RFTestDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +48,6 @@
 		430BBB92206B629B00D7999F /* RFTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RFTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430BBB95206B629B00D7999F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		430BBB96206B629B00D7999F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		430BBB98206B629B00D7999F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		430BBB99206B629B00D7999F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		430BBB9C206B629B00D7999F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		430BBB9E206B629B00D7999F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430BBBA1206B629B00D7999F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,36 +59,42 @@
 		430BBBB9206B642900D7999F /* RFTestDemoUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RFTestDemoUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		430BBBBA206B642900D7999F /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		430BBBBC206B684A00D7999F /* RFTestUI-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RFTestUI-Swift.h"; sourceTree = "<group>"; };
-		430BBBBD206B9EF100D7999F /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
-		430BBBBE206B9EF100D7999F /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
-		430C524A206C755500A0CFD9 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		430C5268206D28E200A0CFD9 /* HomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
-		430C5269206D28E200A0CFD9 /* HomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
-		430C526A206D28E200A0CFD9 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
-		430C526D206D295700A0CFD9 /* HomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
-		430C526E206D295700A0CFD9 /* HomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
-		434969A92079B607002381DF /* RFExceptionHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFExceptionHelper.h; sourceTree = "<group>"; };
-		434969AA2079B607002381DF /* RFExceptionHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFExceptionHelper.m; sourceTree = "<group>"; };
-		434969AC2079E683002381DF /* RFCrashCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFCrashCollector.h; sourceTree = "<group>"; };
-		434969AD2079E683002381DF /* RFCrashCollector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFCrashCollector.m; sourceTree = "<group>"; };
-		4355772E2071FF7700D0A707 /* HomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
-		4355772F2071FF7700D0A707 /* HomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
-		435577322072007200D0A707 /* RFHttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFHttpClient.h; sourceTree = "<group>"; };
-		435577332072007200D0A707 /* RFHttpClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFHttpClient.m; sourceTree = "<group>"; };
-		43700272206FE26000F5D190 /* HomeCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCellViewModel.h; sourceTree = "<group>"; };
-		43700273206FE26000F5D190 /* HomeCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCellViewModel.m; sourceTree = "<group>"; };
-		43700275206FE86900F5D190 /* RFReactView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFReactView.h; sourceTree = "<group>"; };
-		43DA4966207472E700778446 /* RFExceptionCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFExceptionCapture.h; sourceTree = "<group>"; };
-		43DA4967207472E700778446 /* RFExceptionCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFExceptionCapture.m; sourceTree = "<group>"; };
-		43DA496C2074738000778446 /* RFExceptionUploader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFExceptionUploader.h; sourceTree = "<group>"; };
-		43DA496D2074738000778446 /* RFExceptionUploader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFExceptionUploader.m; sourceTree = "<group>"; };
-		43DA496F2074742F00778446 /* RFExceptionCaptureProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFExceptionCaptureProtocol.h; sourceTree = "<group>"; };
-		43FF27E220727A30004950B3 /* RFHttpSessionInvalidDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFHttpSessionInvalidDelegate.h; sourceTree = "<group>"; };
-		43FF27E320727D92004950B3 /* RFURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFURLProtocol.h; sourceTree = "<group>"; };
-		43FF27E420727D92004950B3 /* RFURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFURLProtocol.m; sourceTree = "<group>"; };
+		434D00F6207EF4D500666193 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		434D00F7207EF4D500666193 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		434D00F9207EF4D500666193 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		434D00FA207EF4D500666193 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		434D00FB207EF4D500666193 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		434D00FC207EF4D500666193 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		434D00FF207EF4D500666193 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		434D0101207EF4D500666193 /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
+		434D0102207EF4D500666193 /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
+		434D0103207EF4D500666193 /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
+		434D0105207EF4D500666193 /* HomeCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellViewModel.h; sourceTree = "<group>"; };
+		434D0106207EF4D500666193 /* HomeCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellViewModel.m; sourceTree = "<group>"; };
+		434D0108207EF4D500666193 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		434D010B207EF4D600666193 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		434D010C207EF4D600666193 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		434D010D207EF4D600666193 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		434D0123207EF6E600666193 /* RFHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFHttpClient.m; sourceTree = "<group>"; };
+		434D0124207EF6E600666193 /* RFHttpConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFHttpConfig.m; sourceTree = "<group>"; };
+		434D0126207EF6E600666193 /* RFHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFHttpClient.h; sourceTree = "<group>"; };
+		434D0127207EF6E600666193 /* RFHttpConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFHttpConfig.h; sourceTree = "<group>"; };
+		434D0128207EF6E600666193 /* RFHttpClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFHttpClientDelegate.h; sourceTree = "<group>"; };
+		434D012C207EF6E600666193 /* RFExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFExceptionHelper.m; sourceTree = "<group>"; };
+		434D012D207EF6E600666193 /* RFExceptionCaptureProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionCaptureProtocol.h; sourceTree = "<group>"; };
+		434D012E207EF6E600666193 /* RFExceptionUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFExceptionUploader.m; sourceTree = "<group>"; };
+		434D012F207EF6E600666193 /* RFCrashCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCrashCollector.m; sourceTree = "<group>"; };
+		434D0130207EF6E600666193 /* RFExceptionCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionCapture.h; sourceTree = "<group>"; };
+		434D0131207EF6E600666193 /* RFExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionHelper.h; sourceTree = "<group>"; };
+		434D0132207EF6E600666193 /* RFExceptionUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionUploader.h; sourceTree = "<group>"; };
+		434D0133207EF6E600666193 /* RFExceptionCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFExceptionCapture.m; sourceTree = "<group>"; };
+		434D0134207EF6E600666193 /* RFCrashCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCrashCollector.h; sourceTree = "<group>"; };
+		434D0136207EF6E600666193 /* RFReactView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFReactView.h; sourceTree = "<group>"; };
+		434D0148207EFDFB00666193 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		434D0149207EFDFB00666193 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		43ED8D1F207F3D6900F32E80 /* RFCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFCache.h; sourceTree = "<group>"; };
+		43ED8D20207F3D6900F32E80 /* RFCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFCache.m; sourceTree = "<group>"; };
 		43FF27E920731D62004950B3 /* RFPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFPrefixHeader.pch; sourceTree = "<group>"; };
-		43FF27EA20731F9E004950B3 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		43FF27EB20731F9E004950B3 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		638B729F1779850CE9BE47D3 /* Pods_RFTestDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RFTestDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94222D340B9921ACC2FADE73 /* Pods-RFTestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFTestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RFTestDemo/Pods-RFTestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BBE655964C8AA47DBD286412 /* Pods-RFTestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFTestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RFTestDemo/Pods-RFTestDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,23 +150,16 @@
 		430BBB94206B629B00D7999F /* RFTestDemo */ = {
 			isa = PBXGroup;
 			children = (
-				43DA4965207472D200778446 /* RFExceptionCapture */,
-				435577312072004800D0A707 /* RFHttpClient */,
 				430BBB95206B629B00D7999F /* AppDelegate.h */,
 				430BBB96206B629B00D7999F /* AppDelegate.m */,
-				430BBB98206B629B00D7999F /* ViewController.h */,
-				430BBB99206B629B00D7999F /* ViewController.m */,
-				43FF27EA20731F9E004950B3 /* TestViewController.h */,
-				43FF27EB20731F9E004950B3 /* TestViewController.m */,
-				434969AC2079E683002381DF /* RFCrashCollector.h */,
-				434969AD2079E683002381DF /* RFCrashCollector.m */,
-				43700279206FED9800F5D190 /* Model */,
-				43700278206FED8700F5D190 /* View */,
-				43700276206FED6400F5D190 /* ViewModel */,
-				430BBBBD206B9EF100D7999F /* NextViewController.h */,
-				430BBBBE206B9EF100D7999F /* NextViewController.m */,
-				4370027A206FEDD900F5D190 /* ViewModelBindProtocol */,
-				430C524A206C755500A0CFD9 /* test.html */,
+				434D0142207EF72800666193 /* Macro */,
+				434D00DC207EF4D500666193 /* Model */,
+				434D0109207EF4D600666193 /* View */,
+				434D00F4207EF4D500666193 /* ViewController */,
+				434D00FE207EF4D500666193 /* ViewModel */,
+				434D0107207EF4D500666193 /* Resource */,
+				434D0121207EF6E600666193 /* Utils */,
+				434D0138207EF6E600666193 /* Vendor */,
 				43FF27E920731D62004950B3 /* RFPrefixHeader.pch */,
 				430BBB9B206B629B00D7999F /* Main.storyboard */,
 				430BBB9E206B629B00D7999F /* Assets.xcassets */,
@@ -183,68 +182,223 @@
 			path = RFTestDemoUITests;
 			sourceTree = "<group>";
 		};
-		435577312072004800D0A707 /* RFHttpClient */ = {
+		434D00DC207EF4D500666193 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				435577322072007200D0A707 /* RFHttpClient.h */,
-				435577332072007200D0A707 /* RFHttpClient.m */,
-				43FF27E220727A30004950B3 /* RFHttpSessionInvalidDelegate.h */,
-				43FF27E320727D92004950B3 /* RFURLProtocol.h */,
-				43FF27E420727D92004950B3 /* RFURLProtocol.m */,
-			);
-			path = RFHttpClient;
-			sourceTree = "<group>";
-		};
-		43700276206FED6400F5D190 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				4355772E2071FF7700D0A707 /* HomeViewModel.h */,
-				4355772F2071FF7700D0A707 /* HomeViewModel.m */,
-				43700272206FE26000F5D190 /* HomeCellViewModel.h */,
-				43700273206FE26000F5D190 /* HomeCellViewModel.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		43700278206FED8700F5D190 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				430C5268206D28E200A0CFD9 /* HomeCell.h */,
-				430C5269206D28E200A0CFD9 /* HomeCell.m */,
-				430C526A206D28E200A0CFD9 /* HomeCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		43700279206FED9800F5D190 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				430C526D206D295700A0CFD9 /* HomeModel.h */,
-				430C526E206D295700A0CFD9 /* HomeModel.m */,
+				434D0147207EFDFB00666193 /* Home */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4370027A206FEDD900F5D190 /* ViewModelBindProtocol */ = {
+		434D00F4207EF4D500666193 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				43700275206FE86900F5D190 /* RFReactView.h */,
+				434D00F5207EF4D500666193 /* Home */,
+				434D00F8207EF4D500666193 /* Me */,
+				434D00FD207EF4D500666193 /* Base */,
 			);
-			path = ViewModelBindProtocol;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		43DA4965207472D200778446 /* RFExceptionCapture */ = {
+		434D00F5207EF4D500666193 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				43DA4966207472E700778446 /* RFExceptionCapture.h */,
-				43DA4967207472E700778446 /* RFExceptionCapture.m */,
-				434969A92079B607002381DF /* RFExceptionHelper.h */,
-				434969AA2079B607002381DF /* RFExceptionHelper.m */,
-				43DA496C2074738000778446 /* RFExceptionUploader.h */,
-				43DA496D2074738000778446 /* RFExceptionUploader.m */,
-				43DA496F2074742F00778446 /* RFExceptionCaptureProtocol.h */,
+				434D00F7207EF4D500666193 /* ViewController.h */,
+				434D00F6207EF4D500666193 /* ViewController.m */,
 			);
-			path = RFExceptionCapture;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		434D00F8207EF4D500666193 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				434D00F9207EF4D500666193 /* TestViewController.m */,
+				434D00FA207EF4D500666193 /* NextViewController.m */,
+				434D00FB207EF4D500666193 /* NextViewController.h */,
+				434D00FC207EF4D500666193 /* TestViewController.h */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		434D00FD207EF4D500666193 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		434D00FE207EF4D500666193 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				434D0100207EF4D500666193 /* HomeViewModel */,
+				434D0104207EF4D500666193 /* Base */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		434D0100207EF4D500666193 /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				434D00FF207EF4D500666193 /* Box.h */,
+				434D0103207EF4D500666193 /* Box.m */,
+				434D0102207EF4D500666193 /* HomeViewModel.h */,
+				434D0101207EF4D500666193 /* HomeViewModel.m */,
+			);
+			path = HomeViewModel;
+			sourceTree = "<group>";
+		};
+		434D0104207EF4D500666193 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				434D0105207EF4D500666193 /* HomeCellViewModel.h */,
+				434D0106207EF4D500666193 /* HomeCellViewModel.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		434D0107207EF4D500666193 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				434D0108207EF4D500666193 /* test.html */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		434D0109207EF4D600666193 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				434D010A207EF4D600666193 /* Home */,
+				434D010E207EF4D600666193 /* Me */,
+				434D010F207EF4D600666193 /* Base */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		434D010A207EF4D600666193 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				434D010B207EF4D600666193 /* HomeCell.h */,
+				434D010C207EF4D600666193 /* HomeCell.m */,
+				434D010D207EF4D600666193 /* HomeCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		434D010E207EF4D600666193 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		434D010F207EF4D600666193 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		434D0121207EF6E600666193 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				434D0122207EF6E600666193 /* HttpClient */,
+				434D012A207EF6E600666193 /* Category */,
+				434D012B207EF6E600666193 /* CrashRepoter */,
+				434D0135207EF6E600666193 /* Protocol */,
+				434D0137207EF6E600666193 /* Helper */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		434D0122207EF6E600666193 /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				43ED8D1F207F3D6900F32E80 /* RFCache.h */,
+				43ED8D20207F3D6900F32E80 /* RFCache.m */,
+				434D0126207EF6E600666193 /* RFHttpClient.h */,
+				434D0123207EF6E600666193 /* RFHttpClient.m */,
+				434D0127207EF6E600666193 /* RFHttpConfig.h */,
+				434D0124207EF6E600666193 /* RFHttpConfig.m */,
+				434D0128207EF6E600666193 /* RFHttpClientDelegate.h */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
+		434D012A207EF6E600666193 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		434D012B207EF6E600666193 /* CrashRepoter */ = {
+			isa = PBXGroup;
+			children = (
+				434D012C207EF6E600666193 /* RFExceptionHelper.m */,
+				434D012D207EF6E600666193 /* RFExceptionCaptureProtocol.h */,
+				434D012E207EF6E600666193 /* RFExceptionUploader.m */,
+				434D012F207EF6E600666193 /* RFCrashCollector.m */,
+				434D0130207EF6E600666193 /* RFExceptionCapture.h */,
+				434D0131207EF6E600666193 /* RFExceptionHelper.h */,
+				434D0132207EF6E600666193 /* RFExceptionUploader.h */,
+				434D0133207EF6E600666193 /* RFExceptionCapture.m */,
+				434D0134207EF6E600666193 /* RFCrashCollector.h */,
+			);
+			path = CrashRepoter;
+			sourceTree = "<group>";
+		};
+		434D0135207EF6E600666193 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				434D0136207EF6E600666193 /* RFReactView.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		434D0137207EF6E600666193 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		434D0138207EF6E600666193 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				434D0139207EF6E600666193 /* CustomView */,
+				434D013A207EF6E600666193 /* ThirdParty */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		434D0139207EF6E600666193 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		434D013A207EF6E600666193 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		434D0142207EF72800666193 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		434D0147207EFDFB00666193 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				434D0148207EFDFB00666193 /* HomeModel.h */,
+				434D0149207EFDFB00666193 /* HomeModel.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		7DF01A85818B6ACD66DCD4FE /* Pods */ = {
@@ -342,11 +496,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				430C524B206C755500A0CFD9 /* test.html in Resources */,
+				434D011E207EF4D600666193 /* test.html in Resources */,
 				430BBBA2206B629B00D7999F /* LaunchScreen.storyboard in Resources */,
 				430BBB9F206B629B00D7999F /* Assets.xcassets in Resources */,
 				430BBB9D206B629B00D7999F /* Main.storyboard in Resources */,
-				430C526C206D28E200A0CFD9 /* HomeCell.xib in Resources */,
+				434D0120207EF4D600666193 /* HomeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,21 +576,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				435577342072007200D0A707 /* RFHttpClient.m in Sources */,
-				430C526B206D28E200A0CFD9 /* HomeCell.m in Sources */,
-				43DA4968207472E700778446 /* RFExceptionCapture.m in Sources */,
-				430BBB9A206B629B00D7999F /* ViewController.m in Sources */,
-				434969AE2079E683002381DF /* RFCrashCollector.m in Sources */,
-				430BBBBF206B9EF100D7999F /* NextViewController.m in Sources */,
-				43700274206FE26000F5D190 /* HomeCellViewModel.m in Sources */,
-				43FF27E520727D92004950B3 /* RFURLProtocol.m in Sources */,
+				434D011C207EF4D600666193 /* Box.m in Sources */,
+				434D011D207EF4D600666193 /* HomeCellViewModel.m in Sources */,
 				430BBBA5206B629C00D7999F /* main.m in Sources */,
-				43FF27EC20731F9E004950B3 /* TestViewController.m in Sources */,
-				434969AB2079B607002381DF /* RFExceptionHelper.m in Sources */,
-				435577302071FF7700D0A707 /* HomeViewModel.m in Sources */,
-				430C526F206D295700A0CFD9 /* HomeModel.m in Sources */,
+				434D013C207EF6E600666193 /* RFHttpConfig.m in Sources */,
+				434D013B207EF6E600666193 /* RFHttpClient.m in Sources */,
+				434D011A207EF4D600666193 /* NextViewController.m in Sources */,
+				43ED8D21207F3D6900F32E80 /* RFCache.m in Sources */,
+				434D0141207EF6E600666193 /* RFExceptionCapture.m in Sources */,
+				434D0118207EF4D600666193 /* ViewController.m in Sources */,
+				434D0119207EF4D600666193 /* TestViewController.m in Sources */,
+				434D013F207EF6E600666193 /* RFExceptionUploader.m in Sources */,
+				434D013E207EF6E600666193 /* RFExceptionHelper.m in Sources */,
+				434D011B207EF4D600666193 /* HomeViewModel.m in Sources */,
+				434D011F207EF4D600666193 /* HomeCell.m in Sources */,
+				434D014A207EFDFB00666193 /* HomeModel.m in Sources */,
+				434D0140207EF6E600666193 /* RFCrashCollector.m in Sources */,
 				430BBB97206B629B00D7999F /* AppDelegate.m in Sources */,
-				43DA496E2074738000778446 /* RFExceptionUploader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

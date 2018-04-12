@@ -11,10 +11,10 @@
 #import "RFReactView.h"
 
 @interface HomeCell : UITableViewCell<RFReactView>
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 
-//+ (void)cellWithTableView:(UITableView *)tableView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 
 
 @end

@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "HomeCellViewModel.h"
+#import "Box.h"
 
-@interface HomeViewModel : NSObject
+@interface HomeViewModel : Box
 
-@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) Box *title;
 
 @property (nonatomic, readonly, strong) NSMutableArray *dataSource;
 
-- (void)getDataSuccess:(void(^)(NSArray *data))succeed failed:(void(^)(NSError *error))failed;
+- (void)getDataSuccess:(void(^)(NSArray *data))succeed
+                failed:(void(^)(NSError *error))failed;
 
 @end

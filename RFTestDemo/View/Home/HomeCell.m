@@ -16,15 +16,15 @@
 
 @implementation HomeCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
 - (void)bindViewModel:(HomeCellViewModel *)viewModel {
     self.viewModel = viewModel;
     self.titleLabel.text = self.viewModel.model.title;
     self.subtitleLabel.text = self.viewModel.model.subtitle;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

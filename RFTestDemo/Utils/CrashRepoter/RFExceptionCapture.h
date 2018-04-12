@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "RFExceptionCaptureProtocol.h"
 
-
 @interface RFExceptionCapture : NSObject
 
 + (void)registerCrashCapture;

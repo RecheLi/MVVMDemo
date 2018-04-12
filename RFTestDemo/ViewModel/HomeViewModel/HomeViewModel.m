@@ -20,12 +20,15 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.title = @"首页";
+        self.title = [[Box alloc]initWithValue: @"首页"];
     }
     return self;
 }
 
-- (void)getDataSuccess:(void(^)(NSArray *data))succeed failed:(void(^)(NSError *error))failed {
+// 请求获取数据
+- (void)getDataSuccess:(void(^)(NSArray *data))succeed
+                failed:(void(^)(NSError *error))failed {
+    // 获取数据
     for (int i=0; i<10; ++i) {
         HomeModel *model = [HomeModel new];
         model.title = [NSString stringWithFormat:@"豌豆射手 > %@", @(i)];
@@ -33,6 +36,7 @@
         HomeCellViewModel *cViewModel = [[HomeCellViewModel alloc]initWithHomeModel:model];
         [self.dataSource addObject:cViewModel];
     }
+    
     if (self.dataSource.count==0 && failed) {
         NSError *error = [NSError errorWithDomain:@"no data" code:-1 userInfo:nil];
         failed(error);
@@ -40,6 +44,14 @@
     }
     if (succeed) {
         succeed(_dataSource);
+    }
+    [self changeViewModel];
+}
+
+- (void)changeViewModel {
+    // viewmode数据改变
+    if (self.listener) {
+        self.listener(self.dataSource);
     }
 }
 
