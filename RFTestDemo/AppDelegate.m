@@ -21,7 +21,7 @@
     // Override point for customization after application launch.
 //    [RFExceptionCapture registerCrashCapture];
 //    [RFCrashCollector installCrashCollector];
-
+    [RFHttpConfig configureUserName:@"linitial"];
     return YES;
 }
 

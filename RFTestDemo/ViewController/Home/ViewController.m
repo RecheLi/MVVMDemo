@@ -11,6 +11,7 @@
 #import "TestViewController.h"
 #import "HomeViewModel.h"
 #import "HomeCell.h"
+#import "RFCache.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -27,7 +28,7 @@
     [super viewDidLoad];
     [self _setup];
     [self _getData];
-    [self _listenerTest];
+    [self _requestTest];
 }
 
 #pragma mark - Private
@@ -66,6 +67,35 @@
     } failed:^(NSError *error) {
         NSLog(@"request failed");
     }];
+}
+
+- (void)_requestTest {
+    NSDictionary *dic1 = @{@"jalkdsfjl_dic111":@"fsdafs",
+                          @"124fsf":@"vnhgfks",
+                          @"hbhjv":@"fd",
+                          @"majk":@"dfibv"
+                          };
+    NSDictionary *dic2 = @{@"jalkdsfjl_dic222":@"fsdafs",
+                          @"124fsf":@"vnhgfks",
+                          @"hbhjv":@"fd",
+                          @"majk":@"dfibv"
+                          };
+    NSDictionary *dic3 = @{@"jalkdsfjl_dic333":@"fsdafs",
+                          @"124fsf":@"vnhgfks",
+                          @"hbhjv":@"fd",
+                          @"majk":@"dfibv"
+                          };
+    NSDictionary *dic4 = @{@"jalkdsfjl_dic444":@"fsdafs",
+                           @"124fsf":@"vnhgfks",
+                           @"hbhjv":@"fd",
+                           @"majk":@"dfibv"
+                           };
+    NSArray *data = @[dic1,dic2,dic3,dic4];
+    for (int i=0; i<data.count; i++) {
+        [RFCache objectForKey:[NSString stringWithFormat:@"dic%@",@(i+1)] completion:^(NSDictionary *result) {
+            NSLog(@"result is %@",result);
+        }];
+    }
 }
 
 - (void)_cashTest {

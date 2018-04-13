@@ -30,6 +30,9 @@
 		434D0140207EF6E600666193 /* RFCrashCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D012F207EF6E600666193 /* RFCrashCollector.m */; };
 		434D0141207EF6E600666193 /* RFExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0133207EF6E600666193 /* RFExceptionCapture.m */; };
 		434D014A207EFDFB00666193 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0149207EFDFB00666193 /* HomeModel.m */; };
+		43CCD1AD2080851C001D0F9E /* RFBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCD1AC2080851C001D0F9E /* RFBaseViewModel.m */; };
+		43CCD1B020808B4C001D0F9E /* RFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCD1AF20808B4C001D0F9E /* RFBaseViewController.m */; };
+		43CCD1B52080925B001D0F9E /* RFBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCD1B42080925B001D0F9E /* RFBaseModel.m */; };
 		43ED8D21207F3D6900F32E80 /* RFCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ED8D20207F3D6900F32E80 /* RFCache.m */; };
 		CFE5C948E5C2CC4C22F71D64 /* Pods_RFTestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638B729F1779850CE9BE47D3 /* Pods_RFTestDemo.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +95,13 @@
 		434D0136207EF6E600666193 /* RFReactView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFReactView.h; sourceTree = "<group>"; };
 		434D0148207EFDFB00666193 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
 		434D0149207EFDFB00666193 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		43CCD1AB2080851C001D0F9E /* RFBaseViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFBaseViewModel.h; sourceTree = "<group>"; };
+		43CCD1AC2080851C001D0F9E /* RFBaseViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFBaseViewModel.m; sourceTree = "<group>"; };
+		43CCD1AE20808B4C001D0F9E /* RFBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFBaseViewController.h; sourceTree = "<group>"; };
+		43CCD1AF20808B4C001D0F9E /* RFBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFBaseViewController.m; sourceTree = "<group>"; };
+		43CCD1B1208091A6001D0F9E /* RFViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFViewModelProtocol.h; sourceTree = "<group>"; };
+		43CCD1B32080925B001D0F9E /* RFBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFBaseModel.h; sourceTree = "<group>"; };
+		43CCD1B42080925B001D0F9E /* RFBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFBaseModel.m; sourceTree = "<group>"; };
 		43ED8D1F207F3D6900F32E80 /* RFCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFCache.h; sourceTree = "<group>"; };
 		43ED8D20207F3D6900F32E80 /* RFCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFCache.m; sourceTree = "<group>"; };
 		43FF27E920731D62004950B3 /* RFPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFPrefixHeader.pch; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 		434D00DC207EF4D500666193 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43CCD1B22080924E001D0F9E /* Base */,
 				434D0147207EFDFB00666193 /* Home */,
 			);
 			path = Model;
@@ -212,10 +223,10 @@
 		434D00F8207EF4D500666193 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				434D00F9207EF4D500666193 /* TestViewController.m */,
-				434D00FA207EF4D500666193 /* NextViewController.m */,
 				434D00FB207EF4D500666193 /* NextViewController.h */,
+				434D00FA207EF4D500666193 /* NextViewController.m */,
 				434D00FC207EF4D500666193 /* TestViewController.h */,
+				434D00F9207EF4D500666193 /* TestViewController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -223,6 +234,8 @@
 		434D00FD207EF4D500666193 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				43CCD1AE20808B4C001D0F9E /* RFBaseViewController.h */,
+				43CCD1AF20808B4C001D0F9E /* RFBaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -243,6 +256,8 @@
 				434D0103207EF4D500666193 /* Box.m */,
 				434D0102207EF4D500666193 /* HomeViewModel.h */,
 				434D0101207EF4D500666193 /* HomeViewModel.m */,
+				434D0105207EF4D500666193 /* HomeCellViewModel.h */,
+				434D0106207EF4D500666193 /* HomeCellViewModel.m */,
 			);
 			path = HomeViewModel;
 			sourceTree = "<group>";
@@ -250,8 +265,8 @@
 		434D0104207EF4D500666193 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				434D0105207EF4D500666193 /* HomeCellViewModel.h */,
-				434D0106207EF4D500666193 /* HomeCellViewModel.m */,
+				43CCD1AB2080851C001D0F9E /* RFBaseViewModel.h */,
+				43CCD1AC2080851C001D0F9E /* RFBaseViewModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -334,15 +349,15 @@
 		434D012B207EF6E600666193 /* CrashRepoter */ = {
 			isa = PBXGroup;
 			children = (
-				434D012C207EF6E600666193 /* RFExceptionHelper.m */,
 				434D012D207EF6E600666193 /* RFExceptionCaptureProtocol.h */,
-				434D012E207EF6E600666193 /* RFExceptionUploader.m */,
-				434D012F207EF6E600666193 /* RFCrashCollector.m */,
-				434D0130207EF6E600666193 /* RFExceptionCapture.h */,
-				434D0131207EF6E600666193 /* RFExceptionHelper.h */,
 				434D0132207EF6E600666193 /* RFExceptionUploader.h */,
+				434D012E207EF6E600666193 /* RFExceptionUploader.m */,
+				434D0130207EF6E600666193 /* RFExceptionCapture.h */,
 				434D0133207EF6E600666193 /* RFExceptionCapture.m */,
+				434D0131207EF6E600666193 /* RFExceptionHelper.h */,
+				434D012C207EF6E600666193 /* RFExceptionHelper.m */,
 				434D0134207EF6E600666193 /* RFCrashCollector.h */,
+				434D012F207EF6E600666193 /* RFCrashCollector.m */,
 			);
 			path = CrashRepoter;
 			sourceTree = "<group>";
@@ -351,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				434D0136207EF6E600666193 /* RFReactView.h */,
+				43CCD1B1208091A6001D0F9E /* RFViewModelProtocol.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -399,6 +415,15 @@
 				434D0149207EFDFB00666193 /* HomeModel.m */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		43CCD1B22080924E001D0F9E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				43CCD1B32080925B001D0F9E /* RFBaseModel.h */,
+				43CCD1B42080925B001D0F9E /* RFBaseModel.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		7DF01A85818B6ACD66DCD4FE /* Pods */ = {
@@ -589,9 +614,12 @@
 				434D013F207EF6E600666193 /* RFExceptionUploader.m in Sources */,
 				434D013E207EF6E600666193 /* RFExceptionHelper.m in Sources */,
 				434D011B207EF4D600666193 /* HomeViewModel.m in Sources */,
+				43CCD1AD2080851C001D0F9E /* RFBaseViewModel.m in Sources */,
 				434D011F207EF4D600666193 /* HomeCell.m in Sources */,
 				434D014A207EFDFB00666193 /* HomeModel.m in Sources */,
 				434D0140207EF6E600666193 /* RFCrashCollector.m in Sources */,
+				43CCD1B020808B4C001D0F9E /* RFBaseViewController.m in Sources */,
+				43CCD1B52080925B001D0F9E /* RFBaseModel.m in Sources */,
 				430BBB97206B629B00D7999F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

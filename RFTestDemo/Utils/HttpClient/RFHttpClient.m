@@ -42,7 +42,6 @@
                cached:NO];
 }
 
-
 + (RFURLSessionTask *)POST:(NSString *)url
                parameters:(NSDictionary *)params
                   success:(RFHttpRequestSuccess)success
@@ -100,6 +99,95 @@
                           cached:cached];
 }
 
++ (RFURLSessionTask *)uploadWithImageData:(NSData *)imageData
+                                      url:(NSString *)url
+                                 filename:(NSString *)filename
+                                 mimeType:(NSString *)mimeType
+                               parameters:(NSDictionary *)parameters
+                                 progress:(RFUploadProgress)progress
+                                  success:(RFHttpRequestSuccess)success
+                                     fail:(RFHttpRequestFailed)fail {
+    AFHTTPSessionManager *manager = [self _manager];
+    RFURLSessionTask *session = [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        NSString *imageFileName = filename;
+        if (filename == nil || ![filename isKindOfClass:[NSString class]] || filename.length == 0) {
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            formatter.dateFormat = @"yyyyMMddHHmmss"; // can be modified
+            NSString *str = [formatter stringFromDate:[NSDate date]];
+            imageFileName = [NSString stringWithFormat:@"%@.jpg", str];
+        }
+        
+        // 上传图片，以文件流的格式
+        [formData appendPartWithFileData:imageData name:[imageFileName stringByDeletingPathExtension] fileName:imageFileName mimeType:mimeType];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progress) {
+            progress(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self _handleSucceedResponse:responseObject
+                      successHandler:success
+                              cached:NO
+                          requestURL:url];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self _handleFailedError:error
+                  failureHandler:fail
+                  successHandler:success
+            enableCacheWhenFaied:NO
+                      requestURL:url];
+    }];
+    return session;
+}
+
++ (RFURLSessionTask *)uploadFileWithUrl:(NSString *)url
+                          uploadingFile:(NSString *)uploadingFile
+                               progress:(RFUploadProgress)progress
+                                success:(RFHttpRequestSuccess)success
+                                   fail:(RFHttpRequestFailed)fail {
+    AFHTTPSessionManager *manager = [self _manager];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    RFURLSessionTask *session = [manager uploadTaskWithRequest:request fromFile:[NSURL URLWithString:uploadingFile] progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progress) {
+            progress(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
+        }
+    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (!error) {
+            [self _handleSucceedResponse:responseObject
+                          successHandler:success
+                                  cached:NO
+                              requestURL:url];
+            return;
+        }
+        [self _handleFailedError:error
+                  failureHandler:fail
+                  successHandler:success
+            enableCacheWhenFaied:NO
+                      requestURL:url];
+    }];
+    return session;
+}
+
++ (RFURLSessionTask *)downloadWithUrl:(NSString *)url
+                           saveToPath:(NSString *)saveToPath
+                             progress:(RFDownloadProgress)progressBlock
+                              success:(RFHttpRequestSuccess)success
+                              failure:(RFHttpRequestFailed)failure {
+    NSURLRequest *downloadRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    AFHTTPSessionManager *manager = [self _manager];
+    
+    RFURLSessionTask *session = [manager downloadTaskWithRequest:downloadRequest progress:^(NSProgress * _Nonnull downloadProgress) {
+        if (progressBlock) {
+            progressBlock(downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
+        }
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        return [NSURL URLWithString:saveToPath];
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        if (success) {
+            success(filePath.absoluteString);
+        }
+    }];
+    return session;
+}
 
 #pragma mark - Private
 + (RFURLSessionTask *)_requestWithUrl:(NSString *)url
@@ -129,7 +217,8 @@
             [self _handleFailedError:error
                       failureHandler:fail
                       successHandler:success
-                enableCacheWhenFaied:[RFHttpConfig rf_enableCacheWhenRequestFailed] requestURL:url];
+                enableCacheWhenFaied:[RFHttpConfig rf_enableCacheWhenRequestFailed]
+                          requestURL:url];
         }];
     } else if (httpMethod == RFHttpMethodGet) {
         session = [manager GET:url
@@ -146,14 +235,14 @@
             [self _handleFailedError:error
                       failureHandler:fail
                       successHandler:success
-                enableCacheWhenFaied:[RFHttpConfig rf_enableCacheWhenRequestFailed] requestURL:url];
+                enableCacheWhenFaied:[RFHttpConfig rf_enableCacheWhenRequestFailed]
+                          requestURL:url];
         }];
     } else if (httpMethod == RFHttpMethodPut) {
         // TODO:
     } else if (httpMethod == RFHttpMethodDelete) {
         // TODO:
     }
-
     return session;
 }
 
@@ -168,35 +257,8 @@
         manager = [AFHTTPSessionManager manager];
     }
     manager.securityPolicy  = [self _securityPolicy];
-
-    switch ([self _requestType]) {
-        case RFRequestTypeJSON: {
-            manager.requestSerializer = [AFJSONRequestSerializer serializer];
-            [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-            [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-            break;
-        }
-        case RFRequestTypePlainText: {
-            manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-            break;
-        }
-    }
-    
-    switch ([self _responseType]) {
-        case RFResponseTypeJSON: {
-            manager.responseSerializer = [AFJSONResponseSerializer serializer];
-            break;
-        }
-        case RFResponseTypeXML: {
-            manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
-            break;
-        }
-        case RFResponseTypeData: {
-            manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-            break;
-        }
-    }
-    
+    manager.requestSerializer = [self _managerRequestSerializer];
+    manager.responseSerializer = [self _managerResponseSerializer];
     manager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
     
     for (NSString *key in [self _httpHeaders].allKeys) {
@@ -211,7 +273,6 @@
                                                                               @"text/javascript",
                                                                               @"text/xml",
                                                                               @"image/*"]];
-    
     // 设置允许同时最大并发数量，过大容易出问题
     manager.operationQueue.maxConcurrentOperationCount = 3;
     return manager;
@@ -251,7 +312,7 @@
         return;
     }
     if (cached && [response[@"code"] integerValue] == rf_requestSuccessCode) {
-        [RFCache setData:response forKey:requestURL];
+        [RFCache setData:response forKey:[NSString stringWithFormat:@"%@/%@",[self _userName],requestURL]];
     }
     if (success) {
         success(response);
@@ -268,16 +329,19 @@
             fail(error);
         }
     } else {// 请求失败取缓存
-        NSDictionary *localData = [RFCache objectForKey:requestURL];// 获取本地缓存
-        if (!localData && fail) { // 本地没有，则回调fail
-            if (fail) {
-                fail(error);
-            }
-            return;
-        }
-        if (success) {
-            success(localData);
-        }
+        [RFCache objectForKey:[NSString stringWithFormat:@"%@/%@",[self _userName],requestURL] completion:^(NSDictionary *result) {// 获取本地缓存
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (!result && fail) { // 本地没有，则回调fail
+                    if (fail) {
+                        fail(error);
+                    }
+                    return;
+                }
+                if (success) {
+                    success(result);
+                }
+            });
+        }];
     }
 }
 
@@ -292,6 +356,10 @@
 
 + (NSString *)_baseUrl {
     return [RFHttpConfig rf_baseUrl];
+}
+
++ (NSString *)_userName {
+    return [RFHttpConfig rf_userName];
 }
 
 + (NSDictionary *)_httpHeaders {
@@ -327,5 +395,38 @@
     return securityPolicy;
 }
 
++ (AFHTTPResponseSerializer *)_managerResponseSerializer {
+    switch ([self _responseType]) {
+        case RFResponseTypeJSON: {
+            return [AFJSONResponseSerializer serializer];
+            break;
+        }
+        case RFResponseTypeXML: {
+            return [AFXMLParserResponseSerializer serializer];
+            break;
+        }
+        case RFResponseTypeData: {
+            return [AFHTTPResponseSerializer serializer];
+            break;
+        }
+    }
+}
+
++ (AFHTTPRequestSerializer *)_managerRequestSerializer {
+    switch ([self _requestType]) {
+        case RFRequestTypeJSON: {
+            AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+            [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+            [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            return requestSerializer;
+            break;
+        }
+        case RFRequestTypePlainText: {
+            AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
+            return requestSerializer;
+            break;
+        }
+    }
+}
 
 @end

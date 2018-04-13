@@ -23,9 +23,10 @@
  通过key值获取缓存
 
  @param key 一般为请求的url
- @return 返回缓存数据 NSDictionary
+ @param completion 回调数据
  */
-+ (NSDictionary *)objectForKey:(NSString *)key;
++ (void)objectForKey:(NSString *)key
+          completion:(void(^)(NSDictionary *result))completion;
 
 /**
  移除所有缓存

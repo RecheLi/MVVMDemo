@@ -16,12 +16,17 @@ static BOOL rf_enableActivityIndicator = YES;
 static id<RFHttpClientDelegate>_delegate = nil;
 static RFRequestType rf_requestType = RFRequestTypeJSON;
 static RFResponseType rf_responseType = RFResponseTypeJSON;
+static NSString *rf_userName = nil;
 
 @implementation RFHttpConfig
 
 #pragma mark - Public
 + (void)updateBaseURL:(NSString *)baseURL {
     rf_baseUrl = baseURL;
+}
+
++ (void)configureUserName:(NSString *)userName {
+    rf_userName = userName;
 }
 
 + (void)configureHTTPHeaders:(NSDictionary *)httpHeaders {
@@ -46,6 +51,10 @@ static RFResponseType rf_responseType = RFResponseTypeJSON;
 
 + (NSString *)rf_baseUrl {
     return rf_baseUrl;
+}
+
++ (NSString *)rf_userName {
+    return rf_userName;
 }
 
 + (NSDictionary *)rf_httpHeaders {

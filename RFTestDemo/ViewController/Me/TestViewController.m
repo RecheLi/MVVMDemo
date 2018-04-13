@@ -36,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self _setup];
-//    [self _cashTest];
+
 }
 
 #pragma mark - Private

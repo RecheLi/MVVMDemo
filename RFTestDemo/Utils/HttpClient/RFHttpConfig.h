@@ -46,6 +46,13 @@ typedef NS_ENUM(NSUInteger, RFNetworkStatusType) {
 + (NSString *)rf_baseUrl;
 
 /**
+ 返回用户名
+
+ @return @"linitial"
+ */
++ (NSString *)rf_userName;
+
+/**
  返回公共请求头
  @return 公共请求头的@{}
  */
@@ -102,6 +109,13 @@ typedef NS_ENUM(NSUInteger, RFNetworkStatusType) {
  */
 + (void)configureCommonParams:(NSDictionary *)commonParams;
 
+
+/**
+ 配置用户名，以区分不同用户的cache
+
+ @param userName @"linitial"
+ */
++ (void)configureUserName:(NSString *)userName;
 
 /**
  配置请求地址 可在Appdelegate中配置

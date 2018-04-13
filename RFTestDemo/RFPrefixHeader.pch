@@ -9,7 +9,15 @@
 #ifndef RFPrefixHeader_pch
 #define RFPrefixHeader_pch
 
+
 // Include any system framework and library headers here that should be included in all compilation units.
+#import "RFReactView.h"
+#import "RFViewModelProtocol.h"
+#import "RFBaseModel.h"
+#import "RFBaseViewModel.h"
+#import "RFBaseViewController.h"
+#import "RFHttpClient.h"
+
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #ifndef weakify

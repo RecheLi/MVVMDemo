@@ -11,4 +11,6 @@
 @protocol RFHttpClientDelegate <NSObject>
 @required
 - (void)enterLoginInterfaceTologin;
+
+
 @end
