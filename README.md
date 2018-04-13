@@ -1,0 +1,2 @@
+# RFTestDemo
+这个Demo里面主要有一个崩溃日志的采集与上报和一个对AFNetworking进行二次封装的网络请求类。
