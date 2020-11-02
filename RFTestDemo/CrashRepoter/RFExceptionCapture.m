@@ -61,7 +61,6 @@ void _removeExceptionsData () {
         NSError *error;
         [fileMger removeItemAtPath:filePath error:&error];
         if (error) return;
-        NSLog(@"delete txt");
     }
 }
 
@@ -132,7 +131,9 @@ void _startCapture() {
     // 判断是否之前已注册handler，避免恶意覆盖
     NSUncaughtExceptionHandler *handler = NSGetUncaughtExceptionHandler();
     if (!handler) {
+#ifdef DEBUG
         NSLog(@"no previous handler");
+#endif
     } else {
         ori_vaildUncaughtExceptionHandler = handler;
     }
@@ -167,7 +168,9 @@ void _startCapture() {
         NSMutableArray *array = @[].mutableCopy;
         [array addObject:params];
         if ([array writeToFile:path atomically:YES]) {
+#ifdef DEBUG
             NSLog(@"初次写入成功");
+#endif
         }
         return;
     }
@@ -175,7 +178,9 @@ void _startCapture() {
     NSMutableArray *localData = get_local_exception_array();
     [localData addObject:params];
     if ([localData writeToFile:path atomically:YES]) {
+#ifdef DEBUG
         NSLog(@"追加异常并写入成功");
+#endif
     }
     _uninstallExceptionHandler();
     //处理之前的handler

@@ -25,15 +25,15 @@
 		434D0120207EF4D600666193 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434D010D207EF4D600666193 /* HomeCell.xib */; };
 		434D013B207EF6E600666193 /* RFHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0123207EF6E600666193 /* RFHttpClient.m */; };
 		434D013C207EF6E600666193 /* RFHttpConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0124207EF6E600666193 /* RFHttpConfig.m */; };
-		434D013E207EF6E600666193 /* RFExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D012C207EF6E600666193 /* RFExceptionHelper.m */; };
-		434D013F207EF6E600666193 /* RFExceptionUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D012E207EF6E600666193 /* RFExceptionUploader.m */; };
-		434D0140207EF6E600666193 /* RFCrashCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D012F207EF6E600666193 /* RFCrashCollector.m */; };
-		434D0141207EF6E600666193 /* RFExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0133207EF6E600666193 /* RFExceptionCapture.m */; };
 		434D014A207EFDFB00666193 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D0149207EFDFB00666193 /* HomeModel.m */; };
 		43CCD1AD2080851C001D0F9E /* RFBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCD1AC2080851C001D0F9E /* RFBaseViewModel.m */; };
 		43CCD1B020808B4C001D0F9E /* RFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCD1AF20808B4C001D0F9E /* RFBaseViewController.m */; };
 		43CCD1B52080925B001D0F9E /* RFBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCD1B42080925B001D0F9E /* RFBaseModel.m */; };
 		43ED8D21207F3D6900F32E80 /* RFCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ED8D20207F3D6900F32E80 /* RFCache.m */; };
+		CEE2AEAC254FB62D003BD0A5 /* RFExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2AEA3254FB62D003BD0A5 /* RFExceptionHelper.m */; };
+		CEE2AEAD254FB62D003BD0A5 /* RFExceptionUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2AEA5254FB62D003BD0A5 /* RFExceptionUploader.m */; };
+		CEE2AEAE254FB62D003BD0A5 /* RFCrashCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2AEA6254FB62D003BD0A5 /* RFCrashCollector.m */; };
+		CEE2AEAF254FB62D003BD0A5 /* RFExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE2AEAA254FB62D003BD0A5 /* RFExceptionCapture.m */; };
 		CFE5C948E5C2CC4C22F71D64 /* Pods_RFTestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638B729F1779850CE9BE47D3 /* Pods_RFTestDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,15 +83,6 @@
 		434D0126207EF6E600666193 /* RFHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFHttpClient.h; sourceTree = "<group>"; };
 		434D0127207EF6E600666193 /* RFHttpConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFHttpConfig.h; sourceTree = "<group>"; };
 		434D0128207EF6E600666193 /* RFHttpClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFHttpClientDelegate.h; sourceTree = "<group>"; };
-		434D012C207EF6E600666193 /* RFExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFExceptionHelper.m; sourceTree = "<group>"; };
-		434D012D207EF6E600666193 /* RFExceptionCaptureProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionCaptureProtocol.h; sourceTree = "<group>"; };
-		434D012E207EF6E600666193 /* RFExceptionUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFExceptionUploader.m; sourceTree = "<group>"; };
-		434D012F207EF6E600666193 /* RFCrashCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCrashCollector.m; sourceTree = "<group>"; };
-		434D0130207EF6E600666193 /* RFExceptionCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionCapture.h; sourceTree = "<group>"; };
-		434D0131207EF6E600666193 /* RFExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionHelper.h; sourceTree = "<group>"; };
-		434D0132207EF6E600666193 /* RFExceptionUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionUploader.h; sourceTree = "<group>"; };
-		434D0133207EF6E600666193 /* RFExceptionCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFExceptionCapture.m; sourceTree = "<group>"; };
-		434D0134207EF6E600666193 /* RFCrashCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCrashCollector.h; sourceTree = "<group>"; };
 		434D0136207EF6E600666193 /* RFReactView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFReactView.h; sourceTree = "<group>"; };
 		434D0148207EFDFB00666193 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
 		434D0149207EFDFB00666193 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
@@ -108,6 +99,15 @@
 		638B729F1779850CE9BE47D3 /* Pods_RFTestDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RFTestDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94222D340B9921ACC2FADE73 /* Pods-RFTestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFTestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RFTestDemo/Pods-RFTestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BBE655964C8AA47DBD286412 /* Pods-RFTestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFTestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RFTestDemo/Pods-RFTestDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CEE2AEA3254FB62D003BD0A5 /* RFExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFExceptionHelper.m; sourceTree = "<group>"; };
+		CEE2AEA4254FB62D003BD0A5 /* RFExceptionCaptureProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionCaptureProtocol.h; sourceTree = "<group>"; };
+		CEE2AEA5254FB62D003BD0A5 /* RFExceptionUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFExceptionUploader.m; sourceTree = "<group>"; };
+		CEE2AEA6254FB62D003BD0A5 /* RFCrashCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCrashCollector.m; sourceTree = "<group>"; };
+		CEE2AEA7254FB62D003BD0A5 /* RFExceptionCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionCapture.h; sourceTree = "<group>"; };
+		CEE2AEA8254FB62D003BD0A5 /* RFExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionHelper.h; sourceTree = "<group>"; };
+		CEE2AEA9254FB62D003BD0A5 /* RFExceptionUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFExceptionUploader.h; sourceTree = "<group>"; };
+		CEE2AEAA254FB62D003BD0A5 /* RFExceptionCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFExceptionCapture.m; sourceTree = "<group>"; };
+		CEE2AEAB254FB62D003BD0A5 /* RFCrashCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCrashCollector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +170,7 @@
 				434D0107207EF4D500666193 /* Resource */,
 				434D0121207EF6E600666193 /* Utils */,
 				434D0138207EF6E600666193 /* Vendor */,
+				CEE2AEA2254FB62D003BD0A5 /* CrashRepoter */,
 				43FF27E920731D62004950B3 /* RFPrefixHeader.pch */,
 				430BBB9B206B629B00D7999F /* Main.storyboard */,
 				430BBB9E206B629B00D7999F /* Assets.xcassets */,
@@ -318,7 +319,6 @@
 			children = (
 				434D0122207EF6E600666193 /* HttpClient */,
 				434D012A207EF6E600666193 /* Category */,
-				434D012B207EF6E600666193 /* CrashRepoter */,
 				434D0135207EF6E600666193 /* Protocol */,
 				434D0137207EF6E600666193 /* Helper */,
 			);
@@ -344,22 +344,6 @@
 			children = (
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		434D012B207EF6E600666193 /* CrashRepoter */ = {
-			isa = PBXGroup;
-			children = (
-				434D012D207EF6E600666193 /* RFExceptionCaptureProtocol.h */,
-				434D0132207EF6E600666193 /* RFExceptionUploader.h */,
-				434D012E207EF6E600666193 /* RFExceptionUploader.m */,
-				434D0130207EF6E600666193 /* RFExceptionCapture.h */,
-				434D0133207EF6E600666193 /* RFExceptionCapture.m */,
-				434D0131207EF6E600666193 /* RFExceptionHelper.h */,
-				434D012C207EF6E600666193 /* RFExceptionHelper.m */,
-				434D0134207EF6E600666193 /* RFCrashCollector.h */,
-				434D012F207EF6E600666193 /* RFCrashCollector.m */,
-			);
-			path = CrashRepoter;
 			sourceTree = "<group>";
 		};
 		434D0135207EF6E600666193 /* Protocol */ = {
@@ -433,6 +417,22 @@
 				BBE655964C8AA47DBD286412 /* Pods-RFTestDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEE2AEA2254FB62D003BD0A5 /* CrashRepoter */ = {
+			isa = PBXGroup;
+			children = (
+				CEE2AEAB254FB62D003BD0A5 /* RFCrashCollector.h */,
+				CEE2AEA6254FB62D003BD0A5 /* RFCrashCollector.m */,
+				CEE2AEA7254FB62D003BD0A5 /* RFExceptionCapture.h */,
+				CEE2AEAA254FB62D003BD0A5 /* RFExceptionCapture.m */,
+				CEE2AEA4254FB62D003BD0A5 /* RFExceptionCaptureProtocol.h */,
+				CEE2AEA8254FB62D003BD0A5 /* RFExceptionHelper.h */,
+				CEE2AEA3254FB62D003BD0A5 /* RFExceptionHelper.m */,
+				CEE2AEA9254FB62D003BD0A5 /* RFExceptionUploader.h */,
+				CEE2AEA5254FB62D003BD0A5 /* RFExceptionUploader.m */,
+			);
+			path = CrashRepoter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,24 +602,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				434D011C207EF4D600666193 /* Box.m in Sources */,
+				CEE2AEAE254FB62D003BD0A5 /* RFCrashCollector.m in Sources */,
 				434D011D207EF4D600666193 /* HomeCellViewModel.m in Sources */,
 				430BBBA5206B629C00D7999F /* main.m in Sources */,
 				434D013C207EF6E600666193 /* RFHttpConfig.m in Sources */,
 				434D013B207EF6E600666193 /* RFHttpClient.m in Sources */,
+				CEE2AEAD254FB62D003BD0A5 /* RFExceptionUploader.m in Sources */,
 				434D011A207EF4D600666193 /* NextViewController.m in Sources */,
+				CEE2AEAC254FB62D003BD0A5 /* RFExceptionHelper.m in Sources */,
 				43ED8D21207F3D6900F32E80 /* RFCache.m in Sources */,
-				434D0141207EF6E600666193 /* RFExceptionCapture.m in Sources */,
 				434D0118207EF4D600666193 /* ViewController.m in Sources */,
 				434D0119207EF4D600666193 /* TestViewController.m in Sources */,
-				434D013F207EF6E600666193 /* RFExceptionUploader.m in Sources */,
-				434D013E207EF6E600666193 /* RFExceptionHelper.m in Sources */,
 				434D011B207EF4D600666193 /* HomeViewModel.m in Sources */,
 				43CCD1AD2080851C001D0F9E /* RFBaseViewModel.m in Sources */,
 				434D011F207EF4D600666193 /* HomeCell.m in Sources */,
 				434D014A207EFDFB00666193 /* HomeModel.m in Sources */,
-				434D0140207EF6E600666193 /* RFCrashCollector.m in Sources */,
 				43CCD1B020808B4C001D0F9E /* RFBaseViewController.m in Sources */,
 				43CCD1B52080925B001D0F9E /* RFBaseModel.m in Sources */,
+				CEE2AEAF254FB62D003BD0A5 /* RFExceptionCapture.m in Sources */,
 				430BBB97206B629B00D7999F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,9 @@ static NSUncaughtExceptionHandler *_previousUncaughtExceptionHandler;
     _previousUncaughtExceptionHandler = NSGetUncaughtExceptionHandler();
     NSUncaughtExceptionHandler *handler = NSGetUncaughtExceptionHandler();
     if (!handler) {
+#ifdef DEBUG
         NSLog(@"no previous handler");
+#endif
     } else {
         _previousUncaughtExceptionHandler = handler;
     }
@@ -44,11 +46,15 @@ void uninstallCrashCollector() {
 }
 
 void _signalHandler(int signalCode) {
+#ifdef DEBUG
     NSLog(@"signalCode is %@", @(signalCode));
+#endif
 }
 
 void _uncaughtExceptionHandler(NSException *exception) {
+#ifdef DEBUG
     NSLog(@"exception name is %@", exception.name);
+#endif
     uninstallCrashCollector();
     if (_previousUncaughtExceptionHandler) {
         _previousUncaughtExceptionHandler(exception);

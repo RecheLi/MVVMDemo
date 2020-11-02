@@ -15,17 +15,10 @@ static NSString *const RFExceptionUploaderUrl = @"http://10.100.0.253:8801/finge
 + (void)uploadExceptionForPath:(NSString *)filePath
                  uploadSuccess:(RFExceptionUploadSucceed)succeed
                  uploadFail:(RFExceptionUploadFailed)failed {
-    NSLog(@"  上报崩溃信息  ");    
     NSMutableArray <NSDictionary *>*exceptionData = [NSMutableArray arrayWithContentsOfFile:filePath];
-    NSLog(@"exceptionData is %@",exceptionData);
     if (!exceptionData||exceptionData.count==0) return;
     // 测试
-#if DEBUG
     [self _sendRequest:exceptionData uploadSuccess:succeed uploadFail:failed];
-#else
-    [self _sendRequest:exceptionData uploadSuccess:succeed uploadFail:failed];
-#endif
-
 }
 
 + (void)_sendRequest:(NSMutableArray *)exceptionData
@@ -33,25 +26,20 @@ static NSString *const RFExceptionUploaderUrl = @"http://10.100.0.253:8801/finge
           uploadFail:(RFExceptionUploadFailed)failed {
     __block NSInteger successCount = 0;
     [exceptionData enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"com.redfinger.RFTestDemo"];
-//        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:configuration];
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         [manager POST:RFExceptionUploaderUrl parameters:obj progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if ([responseObject[@"resultCode"]integerValue] != 0) {
-                NSLog(@"report fail");
                 if (failed) {
                     failed();
                 }
                 
             } else {
-                NSLog(@"report success");
                 if (succeed) {
                     successCount += 1;
                     succeed(successCount,idx);
                 }
             }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"report fail");
             if (failed) {
                 failed();
             }
