@@ -29,6 +29,7 @@
     [self _setup];
     [self _getData];
     [self _requestTest];
+    [self _listenerTest];
 }
 
 #pragma mark - Private
@@ -62,8 +63,10 @@
 }
 
 - (void)_appendDataTest {
+    @weakify(self);
     [self.viewModel getDataSuccess:^(NSArray *data) {
-        
+        @strongify(self);
+        [self.tableView reloadData];
     } failed:^(NSError *error) {
         NSLog(@"request failed");
     }];
@@ -146,6 +149,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     switch (indexPath.row) {
         case 0:
 //            [self pushTest];
